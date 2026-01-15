@@ -7,8 +7,8 @@ import { VocabularyProvider } from "@/contexts/VocabularyContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "英語学習アプリ - 苦手な単語を文脈で覚える",
-  description: "苦手な単語を文脈で覚える英語学習アプリケーション",
+  title: "SPILLOVER in Aomori 2026 参加表明画像生成",
+  description: "SPILLOVER in Aomori 2026の参加表明画像を生成できます。",
 };
 
 export default function RootLayout({
