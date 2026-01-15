@@ -2,6 +2,10 @@
   "name": "english-learning-app",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.7.0",
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
