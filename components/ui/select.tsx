@@ -1,0 +1,67 @@
+"use client";
+
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+export interface SelectProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  defaultValue?: string;
+  value?: string;
+}
+
+const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ className, children, defaultValue, value, ...props }, ref) => {
+    return (
+      <select
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          className
+        )}
+        ref={ref}
+        defaultValue={defaultValue}
+        value={value}
+        {...props}
+      >
+        {children}
+      </select>
+    )
+  }
+)
+Select.displayName = "Select"
+
+const SelectTrigger = React.forwardRef<HTMLSelectElement, SelectProps>(
+  ({ className, children, ...props }, ref) => {
+    return (
+      <Select ref={ref} className={className} {...props}>
+        {children}
+      </Select>
+    )
+  }
+)
+SelectTrigger.displayName = "SelectTrigger"
+
+const SelectValue = ({ placeholder }: { placeholder?: string }) => {
+  return <option value="" disabled>{placeholder || "選択してください"}</option>
+}
+
+const SelectContent = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
+}
+
+const SelectItem = React.forwardRef<
+  HTMLOptionElement,
+  React.OptionHTMLAttributes<HTMLOptionElement>
+>(({ className, ...props }, ref) => {
+  return <option ref={ref} className={className} {...props} />
+})
+SelectItem.displayName = "SelectItem"
+
+export {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+}
+
