@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, Download, Loader2, Image as ImageIcon } from "lucide-react";
@@ -161,13 +160,6 @@ export default function SpilloverPage() {
         <p className="text-gray-600 text-lg">
           参加表明画像を生成
         </p>
-        <div className="mt-4 flex justify-center">
-          <Link href="/english">
-            <Button variant="outline" size="sm">
-              英語学習アプリへ
-            </Button>
-          </Link>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
