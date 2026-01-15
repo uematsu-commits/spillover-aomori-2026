@@ -68,7 +68,7 @@ export default function VocabularyPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-gray-600 italic border-l-4 border-blue-500 pl-3">
-                  "{item.context}"
+                  &quot;{item.context}&quot;
                 </p>
                 <Button
                   onClick={() => handleLearned(item.id)}

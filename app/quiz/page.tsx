@@ -168,7 +168,7 @@ export default function QuizPage() {
             {currentQuestion.word.word}
           </CardTitle>
           <CardDescription className="text-base italic border-l-4 border-blue-500 pl-3">
-            "{currentQuestion.word.context}"
+            &quot;{currentQuestion.word.context}&quot;
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
